@@ -1,6 +1,6 @@
 # No More Orphans
 
-No More Orphans is an ARK: Survival Ascended ArkApi plugin for servers using Super Cryo Storage. It automatically places a player's current shoulder pet into an SCS pod when the player opens configured transmitter-style inventories.
+No More Orphans is an ARK: Survival Ascended ArkApi plugin that automatically places a player's current shoulder pet into an SCS pod or vanilla cryopod when the player opens configured transmitter-style inventories.
 
 The goal is simple: fewer forgotten shoulder pets when players use transmitters, terminals, obelisks, and other configured inventory targets.
 
@@ -16,7 +16,7 @@ The goal is simple: fewer forgotten shoulder pets when players use transmitters,
 
 - ARK: Survival Ascended dedicated server
 - ArkApi installed
-- Super Cryo Storage installed on the server
+- Super Cryo Storage installed on the server when `CaptureMode` is set to `SCS`
 
 ## Install
 
@@ -51,7 +51,19 @@ This toggle is per player and does not require admin permissions.
 
 ## Config
 
-The included `config.json` controls whether the plugin is enabled, which inventories are treated as valid targets, whether loot drops are allowed by default, cooldown timing, SCS blueprint paths, and player loot-drop preferences.
+The included `config.json` controls whether the plugin is enabled, whether it uses SCS pods or vanilla cryopods, which inventories are treated as valid targets, whether loot drops are allowed by default, cooldown timing, blueprint paths, and player loot-drop preferences.
+
+Use `CaptureMode` to choose the capture type:
+
+```json
+"CaptureMode": "SCS"
+```
+
+or:
+
+```json
+"CaptureMode": "Cryo"
+```
 
 By default, loot drops are disabled globally:
 

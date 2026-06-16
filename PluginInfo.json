@@ -1,7 +1,7 @@
 {
   "FullName": "NoMoreOrphans",
-  "Description": "No More Orphans automatically captures the player's shoulder pet into an SCS pod when opening configured transmitter inventories, with per-player loot-drop toggles.",
-  "Version": 0.2,
+  "Description": "No More Orphans automatically captures the player's shoulder pet into an SCS or vanilla cryopod when opening configured transmitter inventories, with per-player loot-drop toggles.",
+  "Version": 0.3,
   "MinApiVersion": 1.21,
   "Dependencies": []
 }
