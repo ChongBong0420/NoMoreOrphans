@@ -1,0 +1,43 @@
+{
+  "Enabled": true,
+  "AllowLootDrops": false,
+  "RequireTargetInventory": true,
+  "CaptureCooldownSeconds": 2.0,
+  "ClearShoulderMountAfterCapture": true,
+  "ScsCryopodBlueprint": "Blueprint'/SCS/SCSCryopod/PrimalItem_SCSCryopod.PrimalItem_SCSCryopod'",
+  "ScsCaptureActorBlueprint": "Blueprint'/SCS/CCA_SCS.CCA_SCS'",
+  "TargetActorNameContains": [
+    "Transmitter",
+    "TekTransmitter",
+    "Terminal",
+    "TributeTerminal",
+    "Obelisk"
+  ],
+  "TargetInventoryNameContains": [
+    "Transmitter",
+    "Tek Transmitter",
+    "Terminal",
+    "Tribute",
+    "Obelisk"
+  ],
+  "LootDropNameContains": [
+    "SupplyCrate",
+    "Supply Crate",
+    "LootCrate",
+    "Loot Crate",
+    "ArtifactCrate",
+    "Artifact Crate",
+    "DeepSeaLootCrate",
+    "Deep Sea Loot",
+    "CaveSupplyCrate",
+    "Cave Loot"
+  ],
+  "PlayerLootDropPreferences": {},
+  "Messages": {
+    "Captured": "Your shoulder pet was placed into an SCS pod.",
+    "NoShoulderPet": "",
+    "CaptureFailed": "No More Orphans failed to pod your shoulder pet. Check the server log.",
+    "DropsEnabled": "No More Orphans will now auto-pod your shoulder pet when you open loot drops.",
+    "DropsDisabled": "No More Orphans will ignore loot drops for you now."
+  }
+}

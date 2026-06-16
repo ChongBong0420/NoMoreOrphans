@@ -1,0 +1,48 @@
+No More Orphans Personal Use License
+
+Copyright (c) 2026 Michael Henderson. All rights reserved except as
+expressly granted below.
+
+Author attribution:
+
+- Legal name: Michael Henderson
+- Also known as: Chong
+- Company / publisher: Safe Mode Software
+
+This license applies to the No More Orphans plugin source code and project
+files, excluding third-party materials included under the external/ directory
+or otherwise identified in THIRD_PARTY_NOTICES.md.
+
+Permission is granted, free of charge, to any person who receives a copy of
+this software to:
+
+1. use, compile, and install the software for personal, private, non-commercial
+   use;
+2. modify the software for personal, private, non-commercial use; and
+3. make backup copies for personal, private, non-commercial use.
+
+The following are not permitted without prior written permission from Michael
+Henderson or Safe Mode Software:
+
+1. selling, renting, sublicensing, or otherwise profiting from the software;
+2. distributing, publishing, uploading, sharing, or repackaging modified copies
+   of the software;
+3. distributing, publishing, uploading, sharing, or repackaging the software as
+   part of a paid product, service, plugin pack, mod pack, server package, or
+   commercial offering;
+4. removing or altering copyright, license, or attribution notices; and
+5. claiming ownership of the original software.
+
+Any personal modifications must remain private unless Michael Henderson or Safe
+Mode Software gives prior written permission to distribute or share them.
+
+Third-party materials remain licensed under their own terms. This license does
+not change the license terms of the ASA Server API SDK or any other third-party
+code, headers, libraries, or tools included with or referenced by this project.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL
+MICHAEL HENDERSON, CHONG, OR SAFE MODE SOFTWARE BE LIABLE FOR ANY CLAIM,
+DAMAGES, OR OTHER LIABILITY ARISING FROM, OUT OF, OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OF THE SOFTWARE.
