@@ -7,7 +7,6 @@ The goal is simple: fewer forgotten shoulder pets when players use transmitters,
 ## Included Files
 
 - `NoMoreOrphans.dll`
-- `NoMoreOrphans.dll.arkapi`
 - `PluginInfo.json`
 - `config.json`
 - `README.md`
@@ -32,7 +31,6 @@ Place the included files in that folder:
 ```text
 NoMoreOrphans/
   NoMoreOrphans.dll
-  NoMoreOrphans.dll.arkapi
   PluginInfo.json
   config.json
   README.md
