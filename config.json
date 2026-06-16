@@ -4,6 +4,7 @@
   "RequireTargetInventory": true,
   "CaptureCooldownSeconds": 2.0,
   "ClearShoulderMountAfterCapture": true,
+  "TemporaryVanillaCryopods": true,
   "CaptureMode": "SCS",
   "ScsCryopodBlueprint": "Blueprint'/SCS/SCSCryopod/PrimalItem_SCSCryopod.PrimalItem_SCSCryopod'",
   "ScsCaptureActorBlueprint": "Blueprint'/SCS/CCA_SCS.CCA_SCS'",

@@ -1,15 +1,16 @@
 # No More Orphans
 
-No More Orphans is an ARK: Survival Ascended ArkApi plugin that automatically places a player's current shoulder pet into an SCS pod or vanilla cryopod when the player opens configured transmitter-style inventories.
+No More Orphans is an ARK: Survival Ascended ArkApi plugin that automatically captures a player's current shoulder pet into an SCS pod or vanilla cryopod when the player opens configured transmitter-style inventories.
 
 The goal is simple: fewer forgotten shoulder pets when players use transmitters, terminals, obelisks, and other configured inventory targets.
 
-## Included files
+## Included Files
 
 - `NoMoreOrphans.dll`
 - `NoMoreOrphans.dll.arkapi`
 - `PluginInfo.json`
 - `config.json`
+- `README.md`
 - `LICENSE`
 
 ## Requirements
@@ -34,12 +35,13 @@ NoMoreOrphans/
   NoMoreOrphans.dll.arkapi
   PluginInfo.json
   config.json
+  README.md
   LICENSE
 ```
 
 Restart the server after installing or replacing the plugin files.
 
-## Player command
+## Player Command
 
 Players can use this chat command to toggle whether No More Orphans should also work on loot drops for them:
 
@@ -50,8 +52,6 @@ Players can use this chat command to toggle whether No More Orphans should also 
 This toggle is per player and does not require admin permissions.
 
 ## Config
-
-The included `config.json` controls whether the plugin is enabled, whether it uses SCS pods or vanilla cryopods, which inventories are treated as valid targets, whether loot drops are allowed by default, cooldown timing, blueprint paths, and player loot-drop preferences.
 
 Use `CaptureMode` to choose the capture type:
 
@@ -65,6 +65,8 @@ or:
 "CaptureMode": "Cryo"
 ```
 
+When `CaptureMode` is `Cryo`, `TemporaryVanillaCryopods` controls whether vanilla cryopods created by No More Orphans are removed after the dino is successfully uncryoed.
+
 By default, loot drops are disabled globally:
 
 ```json
@@ -75,8 +77,10 @@ Players who want loot-drop behavior can toggle it for themselves with `/nmodrops
 
 ## License
 
-No More Orphans is released for personal/private non-commercial use under the included license.
+No More Orphans is copyright (c) 2026 Michael Henderson, also known as Chong,
+and published under Safe Mode Software. It is released for personal, private,
+non-commercial use only. You may install and use it for personal use, but you
+may not distribute modified copies, share repackaged versions, or profit from it
+without prior written permission.
 
-Copyright (c) 2026 Michael Henderson.
-Also known as Chong.
-Published by Safe Mode Software.
+See `LICENSE` for the full terms.
