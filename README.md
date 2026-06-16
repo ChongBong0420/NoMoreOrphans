@@ -4,6 +4,8 @@ No More Orphans is an ARK: Survival Ascended ArkApi plugin that automatically ca
 
 The goal is simple: fewer forgotten shoulder pets when players use transmitters, terminals, obelisks, and other configured inventory targets.
 
+When enabled in config, it can also capture the shoulder pet when a player clicks the transfer-server button and the confirmation dialog opens.
+
 ## Included Files
 
 - `NoMoreOrphans.dll`
@@ -64,6 +66,8 @@ or:
 ```
 
 When `CaptureMode` is `Cryo`, `TemporaryVanillaCryopods` controls whether vanilla cryopods created by No More Orphans are removed after the dino is successfully uncryoed.
+
+`CaptureOnTransferButton` controls whether No More Orphans also captures when the transfer-server confirmation dialog opens.
 
 By default, loot drops are disabled globally:
 
