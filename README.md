@@ -1,8 +1,8 @@
 # No More Orphans
 
-No More Orphans is an ARK: Survival Ascended ArkApi plugin that automatically captures a player's current shoulder pet into an SCS pod or vanilla cryopod when the player opens configured transmitter-style inventories.
+No More Orphans is an ARK: Survival Ascended ArkApi plugin that automatically captures a player's current shoulder pet into a cryopod during the server-transfer flow.
 
-The goal is simple: fewer forgotten shoulder pets when players use transmitters, terminals, obelisks, and other configured inventory targets.
+The goal is simple: fewer forgotten shoulder pets when players travel between maps. This build does not scan open inventories or capture just because a player opens a transmitter; it hooks the transfer confirmation/upload server path instead.
 
 ## Included Files
 
@@ -16,7 +16,8 @@ The goal is simple: fewer forgotten shoulder pets when players use transmitters,
 
 - ARK: Survival Ascended dedicated server
 - ArkApi installed
-- Super Cryo Storage installed on the server when `CaptureMode` is set to `SCS`
+- Super Cryo Storage installed when `CaptureMode` is set to `SCS`
+- Vanilla cryopods, PCS-style cryopods, or another compatible cryopod item blueprint when `CaptureMode` is set to `Cryo`
 
 ## Install
 
@@ -41,13 +42,17 @@ Restart the server after installing or replacing the plugin files.
 
 ## Player Command
 
-Players can use this chat command to toggle whether No More Orphans should also work on loot drops for them:
+No player or admin commands are registered by this build.
 
-```text
-/nmodrops
-```
+## Features
 
-This toggle is per player and does not require admin permissions.
+- Captures the player's current shoulder pet during the transfer-server process
+- Supports Super Cryo Storage mode
+- Supports vanilla/PCS-style cryopod mode through a configurable cryopod blueprint path
+- Supports temporary vanilla cryopods that can be removed after the dino is released
+- Does not scan open inventories
+- Does not use loot-drop toggles or player commands
+- Configurable capture mode, blueprint paths, cooldown, and messages
 
 ## Config
 
@@ -65,13 +70,7 @@ or:
 
 When `CaptureMode` is `Cryo`, `TemporaryVanillaCryopods` controls whether vanilla cryopods created by No More Orphans are removed after the dino is successfully uncryoed.
 
-By default, loot drops are disabled globally:
-
-```json
-"AllowLootDrops": false
-```
-
-Players who want loot-drop behavior can toggle it for themselves with `/nmodrops`.
+`CaptureOnTransferButton` controls whether No More Orphans captures when the transfer-server confirmation dialog opens.
 
 ## License
 
