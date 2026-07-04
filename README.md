@@ -2,9 +2,9 @@
 
 No More Orphans is an ARK: Survival Ascended ArkApi plugin that captures a player's current shoulder pet into an SCS pod or vanilla cryopod during the transfer-server flow.
 
-It does not scan open inventories or capture just because a player opens a transmitter. It waits for the transfer confirmation/upload server path before trying to capture the shoulder pet.
+It waits for the transfer confirmation/upload server path before trying to capture the shoulder pet.
 
-Version 0.52 keeps the same behavior as the pre-update build and only carries the ASA compatibility fixes needed after the Wildcard update. It does not make pods temporary, does not modify filled pod custom data, and does not hook uncryo. If transfer capture still fails, ask the host for the server log line that starts with `NoMoreOrphans transfer trigger fired:`.
+
 
 Download:
 [ChongBong0420/NoMoreOrphans](https://github.com/ChongBong0420/NoMoreOrphans)
