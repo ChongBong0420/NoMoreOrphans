@@ -4,6 +4,8 @@ No More Orphans is an ARK: Survival Ascended ArkApi plugin that automatically ca
 
 The goal is simple: fewer forgotten shoulder pets when players travel between maps. This build does not scan open inventories or capture just because a player opens a transmitter; it hooks the transfer confirmation/upload server path instead.
 
+Version 0.45 registers several transfer/upload hook points for Wildcard update compatibility. If transfer capture still fails, send the server log line that starts with `NoMoreOrphans transfer trigger fired:`.
+
 ## Included Files
 
 - `NoMoreOrphans.dll`
