@@ -4,7 +4,7 @@ No More Orphans is an ARK: Survival Ascended ArkApi plugin that captures a playe
 
 It does not scan open inventories or capture just because a player opens a transmitter. It waits for the transfer confirmation/upload server path before trying to capture the shoulder pet.
 
-Version 0.47 fixes ASA 89.31 pod item creation after Wildcard changed `UPrimalItem.AddNewItem`. It also keeps the 0.46 startup fix that avoids unnecessary vanilla cryopod cleanup hooks while running in SCS mode.
+Version 0.48 fixes ASA 89.31 compatibility in the pod creation path, removes a stale inventory notification call, and disables temporary vanilla cryopod cleanup hooks while Cryo mode is stabilized.
 
 Download:
 [ChongBong0420/NoMoreOrphans](https://github.com/ChongBong0420/NoMoreOrphans)
@@ -61,7 +61,7 @@ or:
 "CaptureMode": "Cryo"
 ```
 
-When `CaptureMode` is `Cryo`, `TemporaryVanillaCryopods` controls whether vanilla cryopods created by No More Orphans are removed after the dino is successfully uncryoed.
+`TemporaryVanillaCryopods` is currently disabled in code for stability while ASA 89.31 Cryo mode is tested.
 
 `CaptureOnTransferButton` controls whether No More Orphans captures when the transfer-server confirmation dialog or upload path fires.
 
