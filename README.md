@@ -1,10 +1,13 @@
 # No More Orphans
 
-No More Orphans is an ARK: Survival Ascended ArkApi plugin that automatically captures a player's current shoulder pet into a cryopod during the server-transfer flow.
+No More Orphans is an ARK: Survival Ascended ArkApi plugin that captures a player's current shoulder pet into an SCS pod or vanilla cryopod during the transfer-server flow.
 
-The goal is simple: fewer forgotten shoulder pets when players travel between maps. This build does not scan open inventories or capture just because a player opens a transmitter; it hooks the transfer confirmation/upload server path instead.
+It does not scan open inventories or capture just because a player opens a transmitter. It waits for the transfer confirmation/upload server path before trying to capture the shoulder pet.
 
-Version 0.45 registers several transfer/upload hook points for Wildcard update compatibility. If transfer capture still fails, send the server log line that starts with `NoMoreOrphans transfer trigger fired:`.
+Version 0.46 fixes ASA 89.31 startup compatibility by avoiding unnecessary vanilla cryopod cleanup hooks while running in SCS mode, and by updating the vanilla cryopod inventory-use hook signature for the new Wildcard update.
+
+Download:
+[ChongBong0420/NoMoreOrphans](https://github.com/ChongBong0420/NoMoreOrphans)
 
 ## Included Files
 
@@ -14,10 +17,12 @@ Version 0.45 registers several transfer/upload hook points for Wildcard update c
 - `README.md`
 - `LICENSE`
 
+No source code is included in this public package.
+
 ## Requirements
 
 - ARK: Survival Ascended dedicated server
-- ArkApi installed
+- ArkApi / ASA Server API 1.21 or newer
 - Super Cryo Storage installed when `CaptureMode` is set to `SCS`
 - Vanilla cryopods, PCS-style cryopods, or another compatible cryopod item blueprint when `CaptureMode` is set to `Cryo`
 
@@ -42,20 +47,6 @@ NoMoreOrphans/
 
 Restart the server after installing or replacing the plugin files.
 
-## Player Command
-
-No player or admin commands are registered by this build.
-
-## Features
-
-- Captures the player's current shoulder pet during the transfer-server process
-- Supports Super Cryo Storage mode
-- Supports vanilla/PCS-style cryopod mode through a configurable cryopod blueprint path
-- Supports temporary vanilla cryopods that can be removed after the dino is released
-- Does not scan open inventories
-- Does not use loot-drop toggles or player commands
-- Configurable capture mode, blueprint paths, cooldown, and messages
-
 ## Config
 
 Use `CaptureMode` to choose the capture type:
@@ -72,7 +63,23 @@ or:
 
 When `CaptureMode` is `Cryo`, `TemporaryVanillaCryopods` controls whether vanilla cryopods created by No More Orphans are removed after the dino is successfully uncryoed.
 
-`CaptureOnTransferButton` controls whether No More Orphans captures when the transfer-server confirmation dialog opens.
+`CaptureOnTransferButton` controls whether No More Orphans captures when the transfer-server confirmation dialog or upload path fires.
+
+## Commands
+
+No player or admin commands are registered by this build.
+
+## Troubleshooting
+
+If the plugin loads but does not capture during transfer, check `ArkApi.log` for:
+
+```text
+NoMoreOrphans transfer trigger fired:
+```
+
+That line shows which transfer/upload hook fired.
+
+If startup fails after a Wildcard update, check `ArkApi.log` for an `API][critical] Failed to get the offset` line and report the exact function name.
 
 ## License
 
