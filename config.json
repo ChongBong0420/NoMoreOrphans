@@ -2,7 +2,6 @@
   "Enabled": true,
   "CaptureCooldownSeconds": 2.0,
   "ClearShoulderMountAfterCapture": true,
-  "TemporaryVanillaCryopods": false,
   "CaptureOnTransferButton": true,
   "CaptureMode": "SCS",
   "ScsCryopodBlueprint": "Blueprint'/SCS/SCSCryopod/PrimalItem_SCSCryopod.PrimalItem_SCSCryopod'",
