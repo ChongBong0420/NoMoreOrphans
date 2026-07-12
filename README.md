@@ -2,9 +2,9 @@
 
 No More Orphans is an ARK: Survival Ascended ArkApi plugin that captures a player's current shoulder pet into an SCS pod or vanilla cryopod during the transfer-server flow.
 
-It waits for the transfer confirmation/upload server path before trying to capture the shoulder pet.
+It does not scan open inventories or capture just because a player opens a transmitter. It waits for the transfer confirmation/upload server path before trying to capture the shoulder pet.
 
-
+Version 0.53 keeps the same behavior as the pre-update build and carries the ASA 91.17 / ASA Server API 2.0 compatibility fix for transfer captures. It avoids the broken `AShooterPlayerController.GetPlayerInventoryComponent()` offset by adding captured pods through the live character inventory field, and it resolves the player character through the controller pawn path. It does not make pods temporary, does not modify filled pod custom data, and does not hook uncryo.
 
 Download:
 [ChongBong0420/NoMoreOrphans](https://github.com/ChongBong0420/NoMoreOrphans)
@@ -23,6 +23,7 @@ No source code is included in this public package.
 
 - ARK: Survival Ascended dedicated server
 - ArkApi / ASA Server API 1.21 or newer
+- Tested on ASA 91.17 with ASA Server API 2.0
 - Super Cryo Storage installed when `CaptureMode` is set to `SCS`
 - Vanilla cryopods, PCS-style cryopods, or another compatible cryopod item blueprint when `CaptureMode` is set to `Cryo`
 
@@ -77,7 +78,7 @@ NoMoreOrphans transfer trigger fired:
 
 That line shows which transfer/upload hook fired.
 
-If startup fails after a Wildcard update, check `ArkApi.log` for an `API][critical] Failed to get the offset` line and report the exact function name.
+If startup or transfer capture fails after a Wildcard update, check `ArkApi.log` for an `API][critical] Failed to get the offset` line and report the exact function name. If the missing function is `AShooterPlayerController.GetPlayerInventoryComponent()`, update to version 0.53 or newer.
 
 ## License
 
