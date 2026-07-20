@@ -2,9 +2,9 @@
 
 No More Orphans is an ARK: Survival Ascended ArkApi plugin that captures a player's current shoulder pet into an SCS pod or vanilla cryopod during the transfer-server flow.
 
-It does not scan open inventories or capture just because a player opens a transmitter. It waits for the transfer confirmation/upload server path before trying to capture the shoulder pet.
+It does not scan open inventories or capture just because a player opens a transmitter. It waits for the transfer confirmation/upload server path before trying to capture the shoulder pet. When vanilla cryo mode is enabled, it can mark the cryopods it creates as temporary, remove the empty marked pod after the dino is deployed, and clear cryo sickness from that NMO pod.
 
-Version 0.53 keeps the same behavior as the pre-update build and carries the ASA 91.17 / ASA Server API 2.0 compatibility fix for transfer captures. It avoids the broken `AShooterPlayerController.GetPlayerInventoryComponent()` offset by adding captured pods through the live character inventory field, and it resolves the player character through the controller pawn path. It does not make pods temporary, does not modify filled pod custom data, and does not hook uncryo.
+Version 0.53 keeps the transfer behavior from the pre-update build and carries the ASA 91.17 / ASA Server API 2.01 compatibility fix for transfer captures. It avoids the broken `AShooterPlayerController.GetPlayerInventoryComponent()` offset by adding captured pods through the live character inventory field, and it resolves the player character through the controller pawn path. Temporary vanilla cryopod cleanup and no-sickness handling use the ASA Server API 2.01 `ServerRequestInventoryUseItem` signature after a marked NMO pod is deployed.
 
 Download:
 [ChongBong0420/NoMoreOrphans](https://github.com/ChongBong0420/NoMoreOrphans)
@@ -22,8 +22,8 @@ No source code is included in this public package.
 ## Requirements
 
 - ARK: Survival Ascended dedicated server
-- ArkApi / ASA Server API 1.21 or newer
-- Tested on ASA 91.17 with ASA Server API 2.0
+- ArkApi / ASA Server API 2.01 or newer
+- Tested on ASA 91.17 with ASA Server API 2.01
 - Super Cryo Storage installed when `CaptureMode` is set to `SCS`
 - Vanilla cryopods, PCS-style cryopods, or another compatible cryopod item blueprint when `CaptureMode` is set to `Cryo`
 
@@ -63,6 +63,14 @@ or:
 ```
 
 `CaptureOnTransferButton` controls whether No More Orphans captures when the transfer-server confirmation dialog or upload path fires.
+
+`TemporaryVanillaCryopods` controls whether vanilla cryopods created by No More Orphans are marked for cleanup after the dino deploys.
+
+`AutoRemoveTemporaryVanillaCryopods` controls whether empty NMO-marked vanilla cryopods are removed after deploy.
+
+`TemporaryVanillaCryopodCleanupIntervalSeconds` controls the recurring backup scan for empty NMO-marked vanilla cryopods. The default is `15.0`.
+
+`ClearCryoSicknessFromTemporaryVanillaCryopods` controls whether NMO-marked vanilla cryopods clear player cryo cooldown and dino cryo sickness during deployment.
 
 ## Commands
 
