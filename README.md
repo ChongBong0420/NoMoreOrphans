@@ -4,7 +4,7 @@ No More Orphans is an ARK: Survival Ascended ArkApi plugin that captures a playe
 
 It does not scan open inventories or capture just because a player opens a transmitter. It waits for the transfer confirmation/upload server path before trying to capture the shoulder pet. When vanilla cryo mode is enabled, it can mark the cryopods it creates as temporary, remove the empty marked pod after the dino is deployed, and clear cryo sickness from that NMO pod.
 
-Version 0.53 keeps the transfer behavior from the pre-update build and carries the ASA 91.17 / ASA Server API 2.01 compatibility fix for transfer captures. It avoids the broken `AShooterPlayerController.GetPlayerInventoryComponent()` offset by adding captured pods through the live character inventory field, and it resolves the player character through the controller pawn path. Temporary vanilla cryopod cleanup and no-sickness handling use the ASA Server API 2.01 `ServerRequestInventoryUseItem` signature after a marked NMO pod is deployed.
+Version 0.54 keeps the transfer behavior from the pre-update build and carries the ASA 91.17 / ASA Server API 2.01 compatibility fix for transfer captures. It avoids the broken `AShooterPlayerController.GetPlayerInventoryComponent()` offset by adding captured pods through the live character inventory field, and it resolves the player character through the controller pawn path. Temporary vanilla cryopod cleanup and no-sickness handling use the ASA Server API 2.01 `ServerRequestInventoryUseItem` signature after a marked NMO pod is deployed.
 
 Download:
 [ChongBong0420/NoMoreOrphans](https://github.com/ChongBong0420/NoMoreOrphans)
@@ -86,7 +86,7 @@ NoMoreOrphans transfer trigger fired:
 
 That line shows which transfer/upload hook fired.
 
-If startup or transfer capture fails after a Wildcard update, check `ArkApi.log` for an `API][critical] Failed to get the offset` line and report the exact function name. If the missing function is `AShooterPlayerController.GetPlayerInventoryComponent()`, update to version 0.53 or newer.
+If startup or transfer capture fails after a Wildcard update, check `ArkApi.log` for an `API][critical] Failed to get the offset` line and report the exact function name. If the missing function is `AShooterPlayerController.GetPlayerInventoryComponent()`, update to version 0.54 or newer.
 
 ## License
 
