@@ -5,7 +5,7 @@
   "CaptureOnTransferButton": true,
   "TemporaryVanillaCryopods": true,
   "AutoRemoveTemporaryVanillaCryopods": true,
-  "TemporaryVanillaCryopodCleanupIntervalSeconds": 15.0,
+  "TemporaryVanillaCryopodCleanupIntervalSeconds": 1.0,
   "ClearCryoSicknessFromTemporaryVanillaCryopods": true,
   "CaptureMode": "SCS",
   "ScsCryopodBlueprint": "Blueprint'/SCS/SCSCryopod/PrimalItem_SCSCryopod.PrimalItem_SCSCryopod'",
