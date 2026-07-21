@@ -2,9 +2,9 @@
 
 No More Orphans is an ARK: Survival Ascended ArkApi plugin that captures a player's current shoulder pet into an SCS pod or vanilla cryopod during the transfer-server flow.
 
-It does not scan open inventories or capture just because a player opens a transmitter. It waits for the transfer confirmation/upload server path before trying to capture the shoulder pet.
+It does not capture just because a player opens a transmitter. It waits until the player starts the server-transfer flow before trying to capture the shoulder pet.
 
-Version 0.57 keeps the same transfer-button behavior as the pre-update build and carries the ASA 91.17 / ASA Server API 2.01 compatibility fix for transfer captures. It avoids the broken `AShooterPlayerController.GetPlayerInventoryComponent()` offset by adding captured pods through the live character inventory field, and it resolves the player character through the controller pawn path. Temporary vanilla cryopods are marked by the plugin, and empty marked pods are cleaned by a lightweight 1-second online-player inventory scan after deploy.
+Version 0.57 is the current public release. It supports SCS mode and vanilla cryopod mode, including optional temporary vanilla cryopods.
 
 Download:
 [ChongBong0420/NoMoreOrphans](https://github.com/ChongBong0420/NoMoreOrphans)
@@ -23,7 +23,6 @@ No source code is included in this public package.
 
 - ARK: Survival Ascended dedicated server
 - ArkApi / ASA Server API 2.01 or newer
-- Tested on ASA 91.17 with ASA Server API 2.01
 - Super Cryo Storage installed when `CaptureMode` is set to `SCS`
 - Vanilla cryopods, PCS-style cryopods, or another compatible cryopod item blueprint when `CaptureMode` is set to `Cryo`
 
@@ -62,9 +61,7 @@ or:
 "CaptureMode": "Cryo"
 ```
 
-`CaptureOnTransferButton` controls whether No More Orphans captures when the transfer-server confirmation dialog or upload path fires.
-
-`TemporaryVanillaCryopodCleanupIntervalSeconds` controls how often the plugin scans online players for empty NMO-marked temporary cryopods. Version 0.57 defaults this to `1.0`.
+`CaptureOnTransferButton` controls whether No More Orphans captures during server transfer.
 
 ## Commands
 
@@ -72,15 +69,7 @@ No player or admin commands are registered by this build.
 
 ## Troubleshooting
 
-If the plugin loads but does not capture during transfer, check `ArkApi.log` for:
-
-```text
-NoMoreOrphans transfer trigger fired:
-```
-
-That line shows which transfer/upload hook fired.
-
-If startup or transfer capture fails after a Wildcard update, check `ArkApi.log` for an `API][critical] Failed to get the offset` line and report the exact function name. If the missing function is `AShooterPlayerController.GetPlayerInventoryComponent()`, update to version 0.57 or newer.
+If the plugin loads but does not capture during transfer, update to the newest release and check the server log for No More Orphans messages. Include those log lines when reporting an issue.
 
 ## License
 
