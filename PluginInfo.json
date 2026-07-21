@@ -1,7 +1,7 @@
 {
   "FullName": "NoMoreOrphans",
   "Description": "No More Orphans automatically captures the player's shoulder pet into an SCS pod or vanilla cryopod when the transfer-server confirmation dialog opens.",
-  "Version": 0.57,
+  "Version": 0.58,
   "MinApiVersion": 2.01,
   "Dependencies": []
 }

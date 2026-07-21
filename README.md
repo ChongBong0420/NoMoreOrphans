@@ -4,7 +4,7 @@ No More Orphans is an ARK: Survival Ascended ArkApi plugin that captures a playe
 
 It does not capture just because a player opens a transmitter. It waits until the player starts the server-transfer flow before trying to capture the shoulder pet.
 
-Version 0.57 is the current public release. It supports SCS mode and vanilla cryopod mode, including optional temporary vanilla cryopods.
+Version 0.58 is the current public release. It supports SCS mode and vanilla cryopod mode, including optional temporary vanilla cryopods.
 
 Download:
 [ChongBong0420/NoMoreOrphans](https://github.com/ChongBong0420/NoMoreOrphans)
@@ -65,7 +65,9 @@ or:
 
 ## Commands
 
-No player or admin commands are registered by this build.
+No player chat commands are registered by this build.
+
+Server owners can use `nmodebug on`, `nmodebug off`, or `nmodebug status` in the server console when troubleshooting.
 
 ## Troubleshooting
 

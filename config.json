@@ -1,8 +1,10 @@
 {
   "Enabled": true,
+  "DebugLogging": false,
   "CaptureCooldownSeconds": 2.0,
   "ClearShoulderMountAfterCapture": true,
   "CaptureOnTransferButton": true,
+  "ItemsPlusCompatibility": false,
   "TemporaryVanillaCryopods": true,
   "AutoRemoveTemporaryVanillaCryopods": true,
   "TemporaryVanillaCryopodCleanupIntervalSeconds": 1.0,
@@ -13,6 +15,11 @@
   "VanillaCryopodBlueprint": "Blueprint'/Game/Extinction/CoreBlueprints/Weapons/PrimalItem_WeaponEmptyCryopod.PrimalItem_WeaponEmptyCryopod'",
   "CryoCooldownBuffBlueprint": "Blueprint'/Game/Extinction/CoreBlueprints/Buffs/Buff_CryoCooldown.Buff_CryoCooldown'",
   "CryoSicknessBuffBlueprint": "Blueprint'/Game/Extinction/CoreBlueprints/Buffs/Buff_CryoSickness.Buff_CryoSickness'",
+  "ItemsPlusTransferNetExecCommand": "EXECTransferRequest",
+  "ItemsPlusActorNameContains": [
+    "ItemsPlus",
+    "ItemsPlusComBuff"
+  ],
   "Messages": {
     "Captured": "Your shoulder pet was placed into a cryopod.",
     "NoShoulderPet": "",
