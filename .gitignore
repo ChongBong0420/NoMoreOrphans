@@ -1,0 +1,13 @@
+# Distribution-only GitHub whitelist.
+#
+# This repository publishes only the compiled plugin bundle and user-facing docs.
+# Source code, SDK files, build files, scripts, archives, and local server copies
+# stay ignored even if someone runs `git add .`.
+*
+!.gitignore
+!README.md
+!LICENSE
+!config.json
+!PluginInfo.json
+!NoMoreOrphans.dll
+!NoMoreOrphans.dll.arkapi
